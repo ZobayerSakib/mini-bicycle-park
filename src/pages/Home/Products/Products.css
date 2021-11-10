@@ -1,0 +1,23 @@
+/* .productDiv{ */
+    /* background-color: aqua; */
+    /* display: grid; */
+    /* grid-template-columns: repeat(3,1fr); */
+/* } */
+
+.gridNeed{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-left: 20px;
+    margin: 20px;
+    grid-gap: 40px;
+}
+
+
+/*---------------------------- Responsive Section--------------------------- */
+@media only screen and (max-width:850px) {
+    .gridNeed{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 40px;
+    }
+}

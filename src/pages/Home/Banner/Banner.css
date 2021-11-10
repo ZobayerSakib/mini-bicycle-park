@@ -1,0 +1,23 @@
+.bannerButton{
+    width: 300px;
+    height: 58px;
+    margin-left: 20px;
+    font-weight: 600;
+    background-color: #FA482E;
+    color:white;
+    border-radius: 30%;
+    border:none;
+
+}
+
+
+/*-------------------- Responsive Section ------------------------------*/
+@media only screen and (max-width:600px) {
+    .bannerButton{
+        width: 100%;
+        margin-left: 0;
+        border:none;
+        border-radius: 0%;
+
+    }
+}
