@@ -1,9 +1,10 @@
 import React from 'react';
-import useFirebase from '../../../hooks/useFirebase';
+import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import '../Products/Products.css'
 
 const Products = () => {
-    const { bikes } = useFirebase()
+    const { bikes } = useAuth()
 
 
     return (
@@ -20,7 +21,7 @@ const Products = () => {
                                 <h5 className='mt-3'>{bike.model}</h5>
                                 <p className='mt-2'>{bike.info}</p>
                                 <p className='mt-1'>BDT {bike.price}</p>
-                                <button>Buy Now</button>
+                                <NavLink to={`purchase/${bike._id}`}><button>Purchase Now</button></NavLink>
 
                             </div>)
                         }
