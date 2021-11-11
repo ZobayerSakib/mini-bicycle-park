@@ -3,6 +3,7 @@ import './App.css';
 import AuthProvider from './context/AuthProvider';
 import Contact from './pages/Contact/Contact';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Explore from './pages/Home/Explore/Explore';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import NotFound from './pages/NotFound/NotFound';
@@ -26,6 +27,9 @@ function App() {
             <Route exact path='/home'>
               <Home></Home>
             </Route>
+            <Route exact path='/explore'>
+              <Explore></Explore>
+            </Route>
             <Route exact path='/contact'>
               <Contact></Contact>
             </Route>
@@ -44,6 +48,8 @@ function App() {
             <Route exact path='/payment'>
               <Payment></Payment>
             </Route>
+
+
             <Route path="*">
               <NotFound></NotFound>
             </Route>

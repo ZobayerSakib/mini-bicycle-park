@@ -46,9 +46,9 @@ const Login = () => {
                     <input className='mt-2' type="submit" value="Sign In" />
                 </form>
                 <p>{error}</p>
-                <p>Are a new User? <Link to='/register' >Register</Link></p>
+                <p>Are you a new User? <Link to='/register' >Register</Link></p>
                 <p>-------------------Or----------------</p>
-                <button onClick={googleLoginSystemHandler}>Sign In With Google</button>
+                <button onClick={googleLoginSystemHandler}><span><i className="fab fa-google"></i></span> Sign In With Google</button>
             </div>
 
             <Footer></Footer>

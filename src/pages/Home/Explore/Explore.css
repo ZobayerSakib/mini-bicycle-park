@@ -1,0 +1,29 @@
+.itemDesign{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-left: 20px;
+    margin: 20px;
+    grid-gap: 40px;
+}
+.itemDesign img{
+    width: 100%;
+}
+
+
+/*---------------------------- Responsive Section--------------------------- */
+@media only screen and (max-width:850px) {
+   .itemDiv{
+       text-align: center;
+   }
+    .itemDesign{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 40px;
+        padding: 20px;
+        margin: 20px;
+    }
+    .itemDesign img{
+        width: 80%;
+    }
+    
+}

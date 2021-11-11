@@ -18,7 +18,7 @@ const Products = () => {
                             products.map(bike => <div className={{ margin: '20px' }}
                                 key={bike._id}
                             >
-                                <img width='100%' height='300' src={bike.img} alt="" />
+                                <img src={bike.img} alt="" />
                                 <h5 className='mt-3'>{bike.model}</h5>
                                 <p className='mt-2'>{bike.info}</p>
                                 <p className='mt-1'>BDT {bike.price}</p>

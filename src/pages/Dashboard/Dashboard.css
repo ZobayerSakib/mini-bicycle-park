@@ -1,3 +1,7 @@
+.dashboard{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
 .dashboardTitle{
     font-family: cursive;
     text-decoration: underline;

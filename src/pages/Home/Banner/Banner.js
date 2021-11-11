@@ -1,5 +1,6 @@
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
+import { Carousel, NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../Banner/Banner.css'
 const Banner = () => {
 
@@ -39,7 +40,7 @@ const Banner = () => {
 
             </Carousel>
 
-            <button className='bannerButton mt-1 '>More Items</button>
+            <Link to='/explore'><button className='bannerButton mt-1 '>More Items</button></Link>
 
         </div>
     );

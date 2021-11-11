@@ -1,0 +1,18 @@
+.newsInfo{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding:20px;
+}
+
+.newsInfo h1{
+    font-weight: 900;
+    font-size: 100px;
+}
+
+
+/*------------------------------ Responsive Section Here-------------------------- */
+@media only screen and (max-width:850px) {
+    .newsInfo h1{
+        font-weight: 900;
+        font-size: 50px;
+    }
+}

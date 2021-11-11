@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import '../Register/Register.css'
+import Footer from '../shared/Footer/Footer';
 const Register = () => {
     const { error, registerWithEmail, signInWithGoogle } = useAuth();
     const [email, setEmail] = useState('');
@@ -22,24 +23,7 @@ const Register = () => {
         e.preventDefault();
         registerWithEmail(email, password);
 
-        // if (password.length < 6) {
-        //     // console.log('Six character needed for register')
-        //     setErrors('Six character needed for register')
-        //     return;
-        // }
-
-
-        // if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
-        //     setErrors('You have to put minimum 2 upperCase')
-        //     console.log('You have to put minimum 2 upperCase');
-        //     return;
-
-        // }
-        // console.log(email, password);
-
     }
-
-
     return (
         <div className=' registerDiv'>
             <div className='registerForm p-5'>
@@ -56,8 +40,9 @@ const Register = () => {
 
                 <p>Are you a new User? <Link to='/login' >Login</Link></p>
                 <p>-------------------Or----------------</p>
-                <button onClick={signInWithGoogle}>Sign In With Google</button>
+                <button onClick={signInWithGoogle}><span><i className="fab fa-google"></i></span> Sign In With Google</button>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
