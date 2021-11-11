@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import firebaseAuthentication from "../firebase/firebase.init"
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 
 
 firebaseAuthentication()
@@ -12,12 +12,8 @@ const useFirebase = () => {
     const [error, setError] = useState('')
     const [products, setProducts] = useState([])
 
-
-
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
-
-
 
     useEffect(() => {
         fetch('http://localhost:5000/bikes')
@@ -78,7 +74,8 @@ const useFirebase = () => {
                 // Signed in 
                 const user = result.user;
                 setUser(user)
-                console.log(user)
+                setError('')
+                emailVerify();
             })
             .catch((error) => {
                 const errorMessage = error.message;
@@ -95,12 +92,20 @@ const useFirebase = () => {
                 // Signed in 
                 const user = result.user;
                 setUser(user)
+                setError('')
 
             })
             .catch((error) => {
                 const errorMessage = error.message;
                 setError(errorMessage)
             });
+    }
+
+    const emailVerify = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result)
+            })
     }
 
     return {

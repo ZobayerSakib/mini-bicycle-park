@@ -5,7 +5,7 @@ import '../Login/Login.css'
 import Footer from '../shared/Footer/Footer';
 const Login = () => {
 
-    const { signInWithEmail, signInWithGoogle } = useAuth();
+    const { error, signInWithEmail, signInWithGoogle } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -29,7 +29,6 @@ const Login = () => {
 
     const loginFormHandler = e => {
         signInWithEmail(email, password);
-        alert('Login Successfully Done!')
         e.preventDefault();
     }
 
@@ -46,7 +45,7 @@ const Login = () => {
                     <br />
                     <input className='mt-2' type="submit" value="Sign In" />
                 </form>
-
+                <p>{error}</p>
                 <p>Are a new User? <Link to='/register' >Register</Link></p>
                 <p>-------------------Or----------------</p>
                 <button onClick={googleLoginSystemHandler}>Sign In With Google</button>
