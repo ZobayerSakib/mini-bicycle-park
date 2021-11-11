@@ -6,6 +6,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import NotFound from './pages/NotFound/NotFound';
+import Payment from './pages/Payment/Payment';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Purchase from './pages/Purchase/Purchase';
 import Register from './pages/Register/Register';
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <Route exact path='/register'>
               <Register></Register>
+            </Route>
+            <Route exact path='/payment'>
+              <Payment></Payment>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

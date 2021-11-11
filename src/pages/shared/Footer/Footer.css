@@ -2,4 +2,48 @@
     background-color: #FEEAE7 ;
     padding:30px;
     text-align: center;
+    font-family: cursive;
 }
+
+.footerDesign h1{
+   
+    font-size: 70px;
+}
+
+.footerSubscribe input,button{
+   border-radius: 8px;
+   height: 42px;
+}
+
+.footerSubscribe input{
+    padding-left: 30px;
+    font-weight: 600;
+}
+
+.footerButton{
+    width: 190px;
+    background-color:#FA472F; 
+    color:white;
+}
+
+span{
+    margin-left: 25px;
+}
+
+.iconDesign{
+    color:#F97C37;
+}
+.footerDesign a{
+    text-decoration: none;
+    font-size: 20px;
+    color:rgb(15, 13, 13);
+    text-align: center;
+
+}
+
+.breadcrumb{
+    padding-top: 20px;
+    justify-content: center;
+    margin: auto;
+}
+

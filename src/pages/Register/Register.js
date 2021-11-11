@@ -5,14 +5,21 @@ import '../Register/Register.css'
 const Register = () => {
     const { signInWithGoogle } = useAuth();
 
+    const registerFormHandler = e => {
+
+        console.log('value added')
+        e.preventDefault();
+    }
+
+
     return (
         <div className=' registerDiv'>
             <div className='registerForm p-5'>
                 <h2>Register Form</h2>
-                <form>
-                    <input className='mt-2' type="email" placeholder='email' />
+                <form onSubmit={registerFormHandler}>
+                    <input className='mt-2' name='email' type="email" placeholder='email' />
                     <br />
-                    <input className='mt-2' type="password" placeholder='password' />
+                    <input className='mt-2' name='password' type="password" placeholder='password' />
                     <br />
                     <input className='mt-2' type="submit" value="Register" />
                 </form>
