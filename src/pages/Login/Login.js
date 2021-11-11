@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import '../Login/Login.css'
+import Footer from '../shared/Footer/Footer';
 const Login = () => {
 
-    const { signInWithGoogle } = useAuth();
+    const { signInWithEmail, signInWithGoogle } = useAuth();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
     const location = useLocation();
     const history = useHistory();
@@ -16,10 +19,17 @@ const Login = () => {
 
             })
     }
+    const emailHandler = e => {
+        setEmail(e.target.value);
+    }
+    const passwordHandler = e => {
+        setPassword(e.target.value);
 
+    }
 
     const loginFormHandler = e => {
-        alert('Depression')
+        signInWithEmail(email, password);
+        alert('Login Successfully Done!')
         e.preventDefault();
     }
 
@@ -30,9 +40,9 @@ const Login = () => {
             <div className='loginForm p-5'>
                 <h2>Login Form</h2>
                 <form onSubmit={loginFormHandler}>
-                    <input className='mt-2' type="email" name='email' placeholder='email' required />
+                    <input className='mt-2' type="email" onBlur={emailHandler} placeholder='email' required />
                     <br />
-                    <input className='mt-2' type="password" name='password' placeholder='password' required />
+                    <input className='mt-2' type="password" onBlur={passwordHandler} placeholder='password' required />
                     <br />
                     <input className='mt-2' type="submit" value="Sign In" />
                 </form>
@@ -41,6 +51,8 @@ const Login = () => {
                 <p>-------------------Or----------------</p>
                 <button onClick={googleLoginSystemHandler}>Sign In With Google</button>
             </div>
+
+            <Footer></Footer>
         </div>
     );
 };

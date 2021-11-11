@@ -70,12 +70,15 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [])
 
+    //Authentication system by email and password
+
     const registerWithEmail = (email, password) => {
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 // Signed in 
                 const user = result.user;
                 setUser(user)
+                console.log(user)
             })
             .catch((error) => {
                 const errorMessage = error.message;
