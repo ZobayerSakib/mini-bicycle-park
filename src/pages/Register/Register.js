@@ -1,24 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-
+import '../Register/Register.css'
 const Register = () => {
-    const { signInWithGoogle } = useAuth()
+    const { signInWithGoogle } = useAuth();
+
     return (
-        <div>
-            <h2>Register Form</h2>
-            <form>
-                <input type="email" placeholder='email' />
-                <br />
-                <input type="password" placeholder='password' />
-                <br />
-                <input type="submit" value="Register" />
-            </form>
+        <div className=' registerDiv'>
+            <div className='registerForm p-5'>
+                <h2>Register Form</h2>
+                <form>
+                    <input className='mt-2' type="email" placeholder='email' />
+                    <br />
+                    <input className='mt-2' type="password" placeholder='password' />
+                    <br />
+                    <input className='mt-2' type="submit" value="Register" />
+                </form>
 
-            <p>Have you already an account? <Link to='/login' >Login</Link></p>
-            <p>-------------------Or--------------</p>
-            <button onClick={signInWithGoogle}>Sign In With Google</button>
-
+                <p>Are a new User? <Link to='/login' >Login</Link></p>
+                <p>-------------------Or----------------</p>
+                <button onClick={signInWithGoogle}>Sign In With Google</button>
+            </div>
         </div>
     );
 };

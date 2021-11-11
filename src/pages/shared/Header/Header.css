@@ -3,12 +3,19 @@
     justify-content: space-around;
     background-color:#FEEAE7 ;
     padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+}
+.headerDesign h1{
+    font-family: cursive;
+    color:#5a5e8f;
+    font-weight: 800;
 }
 .headerLink a{
 text-decoration: none;
 margin-right: 20px;
 line-height: 53px;
+color:black;
 }
 
 /* --------------------------Responsive section -------------------------

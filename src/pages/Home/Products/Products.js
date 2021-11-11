@@ -4,7 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 import '../Products/Products.css'
 
 const Products = () => {
-    const { bikes } = useAuth()
+    const { products } = useAuth();
 
 
     return (
@@ -12,9 +12,10 @@ const Products = () => {
             <div >
                 <h3 className='mt-5 text-center mb-5'>PRODUCTS</h3>
                 <div className='productDiv'>
-                    <div className='gridNeed' >
+                    <div className='bikesDesign' >
+
                         {
-                            bikes.map(bike => <div className={{ margin: '20px' }}
+                            products.map(bike => <div className={{ margin: '20px' }}
                                 key={bike._id}
                             >
                                 <img width='100%' height='300' src={bike.img} alt="" />

@@ -1,10 +1,4 @@
-/* .productDiv{ */
-    /* background-color: aqua; */
-    /* display: grid; */
-    /* grid-template-columns: repeat(3,1fr); */
-/* } */
-
-.gridNeed{
+.bikesDesign{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     padding-left: 20px;
@@ -12,10 +6,21 @@
     grid-gap: 40px;
 }
 
+.bikesDesign button{
+    width: 300px;
+    height: 26px;
+    margin-left: 20px;
+    font-weight: 600;
+    background-color: #FA482E;
+    color:white;
+    border-radius: 9px;
+    border:none;
+
+}
 
 /*---------------------------- Responsive Section--------------------------- */
 @media only screen and (max-width:850px) {
-    .gridNeed{
+    .bikesDesign{
         display: grid;
         grid-template-columns: repeat(1,1fr);
         grid-gap: 40px;

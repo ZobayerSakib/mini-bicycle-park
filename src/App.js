@@ -2,8 +2,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
 import Contact from './pages/Contact/Contact';
+import Dashboard from './pages/Dashboard/Dashboard';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
+import NotFound from './pages/NotFound/NotFound';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Purchase from './pages/Purchase/Purchase';
 import Register from './pages/Register/Register';
@@ -18,26 +20,30 @@ function App() {
           <Header></Header>
           <Switch>
             <Route exact path='/'>
-              <Home />
+              <Home></Home>
             </Route>
             <Route exact path='/home'>
-              <Home />
+              <Home></Home>
             </Route>
             <Route exact path='/contact'>
-              <Contact />
+              <Contact></Contact>
+            </Route>
+            <Route exact path='/dashboard'>
+              <Dashboard></Dashboard>
             </Route>
             <PrivateRoute exact path='/purchase/:purchaseId'>
-              <Purchase />
+              <Purchase></Purchase>
             </PrivateRoute>
             <Route exact path='/login'>
-              <Login />
+              <Login></Login>
             </Route>
             <Route exact path='/register'>
-              <Register />
+              <Register></Register>
             </Route>
-
+            <Route path="*">
+              <NotFound></NotFound>
+            </Route>
           </Switch>
-          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

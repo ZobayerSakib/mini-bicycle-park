@@ -2,5 +2,19 @@
    text-align: center;
    margin-top: 40px;
    margin-bottom: 40px;
+   /* background-color: darkgreen; */
+}
+.purchaseDivDesign{
+   width: 400px;
+   /* background-color: red; */
+   text-align: center;
+   margin: auto;
+   padding: 50px;
+}
+.purchaseDivDesign input{
+   width: 90%;
+   height: 38px;
+   border-radius: 4px;
+   padding-left: 8px;
 }
 

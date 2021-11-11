@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import '../Header/Header.css'
 const Header = () => {
-
+    const { user, logOut } = useAuth();
     return (
         <div className='headerDesign'>
             <div>
@@ -11,15 +12,13 @@ const Header = () => {
             <div className='headerLink'>
                 <NavLink to='/home'>HOME</NavLink>
                 <NavLink to='/contact'>CONTACT US</NavLink>
-
-                <button > Sign Out </button> :
-                <NavLink to='/login'>LOGIN</NavLink>
-
-
-
-
-
-
+                {
+                    user.email && <NavLink to='/dashboard'>DASHBOARD</NavLink>
+                }
+                {
+                    user.email ? <button onClick={logOut}> Sign Out </button> :
+                        <NavLink to='/login'>LOGIN</NavLink>
+                }
 
 
 

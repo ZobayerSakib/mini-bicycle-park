@@ -1,0 +1,22 @@
+.notFound{
+    margin-top:40px;
+    padding: 40px;
+
+}
+
+.notFound h1{
+    font-size: 120px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.notFound button{
+    width: 237px;
+    height: 42px;
+    margin-left: 20px;
+    font-weight: 600;
+    background-color: #FA482E;
+    color:white;
+    border-radius: 9px;
+    border:none;
+
+}

@@ -1,23 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
-
+import { Link, useLocation, useHistory } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
+import '../Login/Login.css'
 const Login = () => {
-    const { signInWithGoogle } = useFirebase()
-    return (
-        <div className='mt-5 mb-5'>
-            <h2>Login Form</h2>
-            <form>
-                <input type="email" placeholder='email' />
-                <br />
-                <input type="password" placeholder='password' />
-                <br />
-                <input type="submit" value="Sign In" />
-            </form>
+    const { signInWithGoogle } = useAuth()
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home';
+    const googleLoginSystemHandler = () => {
+        signInWithGoogle()
+            .then((result) => {
+                history.push(redirect_uri)
 
-            <p>Are a new User? <Link to='/register' >Register</Link></p>
-            <p>-------------------Or----------------</p>
-            <button onClick={signInWithGoogle}>Sign In With Google</button>
+            })
+    }
+    return (
+        <div className=' loginDiv'>
+            <div className='loginForm p-5'>
+                <h2>Login Form</h2>
+                <form>
+                    <input className='mt-2' type="email" placeholder='email' />
+                    <br />
+                    <input className='mt-2' type="password" placeholder='password' />
+                    <br />
+                    <input className='mt-2' type="submit" value="Sign In" />
+                </form>
+
+                <p>Are a new User? <Link to='/register' >Register</Link></p>
+                <p>-------------------Or----------------</p>
+                <button onClick={googleLoginSystemHandler}>Sign In With Google</button>
+            </div>
         </div>
     );
 };

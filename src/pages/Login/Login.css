@@ -1,0 +1,33 @@
+.loginDiv{
+    background-image: url('https://i.ibb.co/MSmMDBv/download-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.loginForm{
+    width: 500px;
+    background-image: url('https://i.ibb.co/DkT6cLP/download.jpg');
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+  
+}
+.loginForm input{
+    width: 95%;
+    border-radius: 7px;
+    height: 48px;
+}
+
+/*------------------------------ Responsive Section----------------------------- */
+@media screen and (max-width:850px) {
+    .loginForm{
+        width: 90%;
+        background-color: brown;
+        /* align-items: center; */
+        text-align: center;
+        margin: auto;
+        padding: 30px;
+    }
+}

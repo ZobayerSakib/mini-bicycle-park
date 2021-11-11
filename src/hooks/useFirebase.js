@@ -1,35 +1,39 @@
 import { useEffect, useState } from "react"
 import firebaseAuthentication from "../firebase/firebase.init"
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+
+
 firebaseAuthentication()
+
+
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState('')
-    const [bikes, setBikes] = useState([])
+    const [products, setProducts] = useState([])
+
+
 
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
 
 
-    useEffect(() => [
+    useEffect(() => {
         fetch('http://localhost:5000/bikes')
             .then(res => res.json())
-            .then(data => setBikes(data))
-    ], [])
+            .then(data => setProducts(data))
+        // .then(data => console.log(data))
+
+    }, [])
+
 
 
 
     const signInWithGoogle = () => {
         setLoading(true)
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                const user = result.user;
-                setUser(user)
-                console.log(user)
-
-            }).catch((error) => {
+        return signInWithPopup(auth, googleProvider)
+            .catch((error) => {
 
                 const errorMessage = error.message;
                 setError(errorMessage);
@@ -44,9 +48,10 @@ const useFirebase = () => {
         signOut(auth)
             .then(() => {
                 setUser({})
+
             }).catch((error) => {
+
                 const errorMessage = error.message;
-                // An error happened.
                 setError(errorMessage)
             })
             .finally(() => setLoading(false));
@@ -65,11 +70,43 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [])
 
+    const registerWithEmail = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                // Signed in 
+                const user = result.user;
+                setUser(user)
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+
+            });
+    }
+
+    // Sign with with email and password
+
+    const signInWithEmail = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                // Signed in 
+                const user = result.user;
+                setUser(user)
+
+            })
+            .catch((error) => {
+                const errorMessage = error.message;
+                setError(errorMessage)
+            });
+    }
+
     return {
-        bikes,
         user,
+        products,
         error,
         loading,
+        registerWithEmail,
+        signInWithEmail,
         signInWithGoogle,
         logOut,
 
