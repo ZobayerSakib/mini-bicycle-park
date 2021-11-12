@@ -6,7 +6,6 @@ import Footer from '../shared/Footer/Footer';
 const AddReview = () => {
 
     const { user } = useAuth();
-    // const [users, setUsers] = useState([]);
     const nameRef = useRef();
     const emailRef = useRef();
     const commentRef = useRef()
@@ -33,15 +32,15 @@ const AddReview = () => {
 
     return (
         <div className='reviewSection'>
-            <h2>Post Your Review</h2>
+            <h2>Add a Comment</h2>
             <form onSubmit={reviewSubmitHandler} className='reviewForm'>
-                <input type="text" defaultValue={user.displayName} ref={nameRef} />
+                <input type="text" defaultValue={user.displayName} ref={nameRef} required />
                 <br /><br />
-                <input type="email" defaultValue={user.email} ref={emailRef} />
+                <input type="email" defaultValue={user.email} ref={emailRef} required />
                 <br /><br />
-                <textarea name="" id="" cols="20" rows="5" placeholder='write comment' ref={commentRef}></textarea>
+                <textarea name="" id="" cols="20" rows="5" placeholder='write comment' ref={commentRef} required></textarea>
                 <br /><br />
-                <input className='inputSubmit' type="submit" value="POST" />
+                <input className='inputSubmit' type="submit" value="POST COMMENT" />
             </form>
             <Footer></Footer>
         </div>

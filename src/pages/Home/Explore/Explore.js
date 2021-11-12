@@ -1,4 +1,6 @@
 import React from 'react';
+import { NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import '../Explore/Explore.css'
 const Explore = () => {
@@ -17,6 +19,11 @@ const Explore = () => {
                         <h4 className='mt-3'>Model Name: {item.model}</h4>
                         <p className='mt-2'><b><u>Details:</u> </b>{item.info}</p>
                         <h5><b>Bicycle Price: </b>{item.price}</h5>
+                        <Link to={`/purchase/${item._id}`}>
+                            <button>Purchase Now</button>
+                        </Link>
+
+
                     </div>)
                 }
             </div>

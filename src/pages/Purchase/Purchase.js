@@ -35,13 +35,13 @@ const Purchase = () => {
                     <div>
                         <form onSubmit={handlePurchaseForm}>
 
-                            <input defaultValue={user.displayName} type="text" />
+                            <input defaultValue={user.displayName} type="text" required />
                             <br />
-                            <input defaultValue={user.email} className='mt-2' type="text" />
+                            <input defaultValue={user.email} className='mt-2' type="text" required />
                             <br />
-                            <input className='mt-2' type="text" placeholder='address' />
+                            <input className='mt-2' type="text" placeholder='address' required />
                             <br />
-                            <input className='mt-2' type="number" placeholder='phone number' />
+                            <input className='mt-2' type="number" placeholder='phone number' required />
                             <br />
                             <input type="submit" className='mt-2' value="Order Place" />
 

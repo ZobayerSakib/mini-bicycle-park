@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
+import AddProducts from './pages/AddProducts/AddProducts';
 import AddReview from './pages/AddReview/AddReview';
 import Contact from './pages/Contact/Contact';
 import Dashboard from './pages/Dashboard/Dashboard';
@@ -12,7 +13,6 @@ import Payment from './pages/Payment/Payment';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import Purchase from './pages/Purchase/Purchase';
 import Register from './pages/Register/Register';
-import Footer from './pages/shared/Footer/Footer';
 import Header from './pages/shared/Header/Header';
 
 function App() {
@@ -52,8 +52,9 @@ function App() {
             <Route exact path='/addReview'>
               <AddReview></AddReview>
             </Route>
-
-
+            <Route exact path='/addProducts'>
+              <AddProducts></AddProducts>
+            </Route>
             <Route path="*">
               <NotFound></NotFound>
             </Route>

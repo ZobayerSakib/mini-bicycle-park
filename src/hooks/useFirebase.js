@@ -19,7 +19,6 @@ const useFirebase = () => {
         fetch('http://localhost:5000/bikes')
             .then(res => res.json())
             .then(data => setProducts(data))
-        // .then(data => console.log(data))
 
     }, [])
 

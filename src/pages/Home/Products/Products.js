@@ -6,7 +6,6 @@ import '../Products/Products.css'
 const Products = () => {
     const { products } = useAuth();
 
-
     return (
         <>
             <div >

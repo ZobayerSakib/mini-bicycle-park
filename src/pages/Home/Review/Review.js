@@ -11,13 +11,13 @@ const Review = () => {
     }, [])
     return (
         <div className='mt-5 p-3 reviewDiv'>
-            <h2>Customers Reviews</h2>
+            <h2>Customers Review</h2>
             <div className='reviewComment'>
                 {
                     reviews.map(review => <div
                         key={review._id}
                     >
-                        <p>{review.comment}</p>
+                        <p><i>{review.comment}</i></p>
                         <h6><i>Commented By-{review.name}</i></h6>
                         <h6><i>{review.email}</i></h6>
                     </div>)

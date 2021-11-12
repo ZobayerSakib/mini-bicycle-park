@@ -1,0 +1,35 @@
+.addNewProductDiv h2{
+text-align: center;
+margin: 30px 30px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.addNewProductForm{
+    background-color: black;
+    width: 450px;
+    padding:30px;
+    margin: auto;
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.addNewProductForm input,textarea{
+    width: 95%;
+    padding: 8px;
+    border-radius: 7px;
+}
+
+/* -----------------------------Responsive Section ---------------------------
+------------------------------------------------------------------------------*/
+
+@media only screen and (max-width:850px) {
+    .addNewProductForm{
+        background-color:#f1eded;
+        width: 90%;
+        padding:20px;
+        margin: auto;
+        margin-bottom: 40px;
+        text-align: center;
+        border-radius: 10px;
+    }
+}
