@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import useAuth from '../../hooks/useAuth';
-// import Products from '../Home/Products/Products';
 import '../Purchase/Purchase.css'
 import Footer from '../shared/Footer/Footer';
+
 const Purchase = () => {
-    const { user } = useAuth();
+    const { user, loading } = useAuth();
     const { purchaseId } = useParams();
     const [bicycle, setBicycle] = useState([]);
-    // const { nameRef } = useRef()
+
+
 
     useEffect(() => {
         fetch(`http://localhost:5000/purchase/${purchaseId}`)
@@ -23,6 +25,11 @@ const Purchase = () => {
         e.preventDefault();
     }
 
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
     return (
         <>
             <div className='purchasePage'>

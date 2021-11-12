@@ -1,10 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import '../Explore/Explore.css'
 const Explore = () => {
-    const { products } = useAuth()
+    const { products, loading } = useAuth();
+
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
     return (
         <div className='itemDiv'>
             <div className='mt-5 mb-5 itemTitle'>

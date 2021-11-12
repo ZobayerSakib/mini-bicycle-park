@@ -1,3 +1,9 @@
+.loadingStyle{
+    font-size: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .registerDiv{
     background-image: url('https://i.ibb.co/MSmMDBv/download-1.jpg');
     background-repeat: no-repeat;

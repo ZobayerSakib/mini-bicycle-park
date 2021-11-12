@@ -1,3 +1,9 @@
+.loadingStyle{
+    font-size: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .itemTitle h1{
 font-size: 70px;
 font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

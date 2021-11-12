@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
+import { Spinner } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import '../AddReview/AddReview.css'
 import Footer from '../shared/Footer/Footer';
@@ -9,13 +10,17 @@ const AddReview = () => {
     const nameRef = useRef();
     const emailRef = useRef();
     const commentRef = useRef()
-
+    const { loading } = useAuth();
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
 
     const reviewSubmitHandler = e => {
         const comment = commentRef.current.value;
         const name = nameRef.current.value;
         const email = emailRef.current.value;
-
 
         const newUser = { comment, name, email };
 

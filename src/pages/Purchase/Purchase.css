@@ -1,12 +1,16 @@
+.loadingStyle{
+   font-size: 150px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+}
 .purchasePage{
    text-align: center;
    margin-top: 40px;
    margin-bottom: 40px;
-   /* background-color: darkgreen; */
 }
 .purchaseDivDesign{
    width: 400px;
-   /* background-color: red; */
    text-align: center;
    margin: auto;
    padding: 50px;

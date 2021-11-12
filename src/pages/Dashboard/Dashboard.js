@@ -1,11 +1,18 @@
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import '../Dashboard/Dashboard.css'
 import Footer from '../shared/Footer/Footer';
 
 const Dashboard = () => {
-    const { logOut, user } = useAuth();
+    const { logOut, loading } = useAuth();
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
+
     return (
         <div className='text-center mt-5 '>
             <div className='dashboard '>

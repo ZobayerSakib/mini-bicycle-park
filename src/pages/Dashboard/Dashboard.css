@@ -1,3 +1,9 @@
+.loadingStyle{
+    font-size: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .dashboard{
     display: grid;
     grid-template-columns: 1fr;

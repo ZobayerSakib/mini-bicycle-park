@@ -1,8 +1,16 @@
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import '../NotFound/NotFound.css'
 
 const NotFound = () => {
+    const { loading } = useAuth();
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
     return (
         <div className='text-center notFound'>
             <h1>404</h1>

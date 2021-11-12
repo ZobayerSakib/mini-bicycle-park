@@ -1,3 +1,9 @@
+.loadingStyle{
+    font-size: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
 .addNewProductDiv h2{
 text-align: center;
 margin: 30px 30px;

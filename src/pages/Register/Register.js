@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import '../Register/Register.css'
 import Footer from '../shared/Footer/Footer';
 const Register = () => {
-    const { error, registerWithEmail, signInWithGoogle } = useAuth();
+    const { error, registerWithEmail, signInWithGoogle, loading } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -24,6 +25,13 @@ const Register = () => {
         registerWithEmail(email, password);
 
     }
+
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
+
     return (
         <div className=' registerDiv'>
             <div className='registerForm p-5'>

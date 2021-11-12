@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import '../Login/Login.css'
 import Footer from '../shared/Footer/Footer';
 const Login = () => {
 
-    const { error, signInWithEmail, signInWithGoogle } = useAuth();
+    const { error, signInWithEmail, signInWithGoogle, loading } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -33,6 +34,11 @@ const Login = () => {
     }
 
 
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
 
     return (
         <div className=' loginDiv'>

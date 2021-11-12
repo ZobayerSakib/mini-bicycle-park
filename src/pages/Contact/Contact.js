@@ -1,7 +1,16 @@
 import React from 'react';
+import { Spinner } from 'react-bootstrap';
+import useAuth from '../../hooks/useAuth';
 import '../Contact/Contact.css'
 import Footer from '../shared/Footer/Footer';
 const Contact = () => {
+
+    const { loading } = useAuth();
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
     return (
         <div>
 

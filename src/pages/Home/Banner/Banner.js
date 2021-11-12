@@ -1,9 +1,15 @@
 import React from 'react';
-import { Carousel, NavLink } from 'react-bootstrap';
+import { Carousel, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../../hooks/useAuth';
 import '../Banner/Banner.css'
 const Banner = () => {
-
+    const { loading } = useAuth();
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
     return (
         <div>
             <Carousel fade>

@@ -1,12 +1,20 @@
 import React, { useRef } from 'react';
 import Footer from '../shared/Footer/Footer';
 import '../AddProducts/AddProducts.css'
+import useAuth from '../../hooks/useAuth';
+import { Spinner } from 'react-bootstrap';
 const AddProducts = () => {
+    const { loading } = useAuth();
     const imgRef = useRef();
     const modelRef = useRef();
     const infoRef = useRef();
     const priceRef = useRef();
 
+    if (loading) {
+        return <div className='loadingStyle'>
+            <Spinner animation="border" variant="info" />
+        </div>
+    }
 
     const productAddHandling = e => {
         const img = imgRef.current.value;
