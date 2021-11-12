@@ -47,3 +47,23 @@ span{
     margin: auto;
 }
 
+/* ------------------------Responsive Section of Footer -------------------------*/
+@media only screen and (max-width:850px) {
+    .footerDesign{
+        background-color: #1E3A8A;
+        padding:30px;
+        text-align: right;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:white
+    }
+    .footerDesign h1{
+        font-size: 40px;
+    }
+    .footerDesign a{
+        text-decoration: none;
+        font-size: 20px;
+        color:white;
+        text-align: center;
+    
+    }
+}

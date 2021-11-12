@@ -30,7 +30,29 @@ color:black;
     .headerDesign {
         display: flex;
         flex-direction: column;
-        padding: 14px;
+        background-color: #1E3A8A;
+        padding:30px;
+        color:white;
 
     }
+    .headerDesign h1{
+        font-family: cursive;
+        color:white;
+        font-size: 40px;
+        font-weight: 900;
+        text-align: center;
+    }
+    .headerLink a{
+        text-decoration: none;
+        margin-right: 20px;
+        line-height: 53px;
+        color:white;
+        }
+        .headerDesign button{
+            background-color: rgb(242, 237, 245);
+            color:rgb(20, 15, 15);
+            width: 100px;
+            font-family: cursive;
+            font-weight: 600;
+        }
 }
