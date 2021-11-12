@@ -10,20 +10,21 @@ const Register = () => {
     const [password, setPassword] = useState('');
 
 
+
     const handleEmailChange = e => {
 
         setEmail(e.target.value)
 
     }
     const handlePasswordChange = e => {
-        // registerWithEmail(e.target.value)
         setPassword(e.target.value);
 
     }
     const registerFormHandler = e => {
         e.preventDefault();
         registerWithEmail(email, password);
-
+        alert('Registration has Successfully Done!')
+        e.target.value = '';
     }
 
     if (loading) {
@@ -37,6 +38,7 @@ const Register = () => {
             <div className='registerForm p-5'>
                 <h2>Register Form</h2>
                 <form onSubmit={registerFormHandler}>
+
                     <input className='mt-2' onBlur={handleEmailChange} type="email" placeholder='email' required />
                     <br />
                     <input className='mt-2' onBlur={handlePasswordChange} type="password" placeholder='password' required />

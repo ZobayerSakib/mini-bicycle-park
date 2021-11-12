@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard/Dashboard';
 import Explore from './pages/Home/Explore/Explore';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
+import MakeAdmin from './pages/MakeAdmin/MakeAdmin';
 import NotFound from './pages/NotFound/NotFound';
 import Payment from './pages/Payment/Payment';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
@@ -54,6 +55,9 @@ function App() {
             </Route>
             <Route exact path='/addProducts'>
               <AddProducts></AddProducts>
+            </Route>
+            <Route exact path='/makeAdmin'>
+              <MakeAdmin></MakeAdmin>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
