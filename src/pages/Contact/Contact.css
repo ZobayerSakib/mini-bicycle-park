@@ -1,0 +1,30 @@
+.contactFileImg img{
+width: 100%;
+}
+.contactInfo{
+    display:grid;
+    grid-template-columns:2fr 3fr;
+    padding:30px;
+}
+.officeInfo{
+    border-right: 2px solid grey;
+    padding-right: 10px;
+}
+
+.queryInfo{
+    padding-left: 15px;
+}
+
+/* --------------------------------Responsive Section -----------------------------*/
+@media only screen and (max-width:850px) {
+    .contactInfo{
+        display:grid;
+        grid-template-columns:1fr;
+        padding:30px;
+    }
+    .officeInfo{
+        border-bottom: 2px solid grey;
+        border-radius: 5px;
+        padding: 10px;
+    }
+}

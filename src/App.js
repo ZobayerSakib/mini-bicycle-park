@@ -45,9 +45,9 @@ function App() {
             <Route exact path='/register'>
               <Register></Register>
             </Route>
-            <Route exact path='/payment'>
+            {/* <Route exact path='/payment'>
               <Payment></Payment>
-            </Route>
+            </Route> */}
 
 
             <Route path="*">
