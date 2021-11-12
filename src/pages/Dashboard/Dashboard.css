@@ -1,6 +1,6 @@
 .dashboard{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr;
 }
 .dashboardTitle{
     font-family: cursive;
@@ -12,5 +12,15 @@
     border-right: 3px solid grey;
 }
 .dashboardAside button{
-width: 50%;
+   width: 30%;
+   background-color: rgb(43, 29, 53);
+   color:white;
+   margin-top: 7px;
+}
+
+/* -------------------Responsive Section -----------------------*/
+@media only screen and (max-width:850px) {
+    .dashboardAside button{
+        width: 80%;
+        }
 }

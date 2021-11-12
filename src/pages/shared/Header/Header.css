@@ -17,6 +17,11 @@ margin-right: 20px;
 line-height: 53px;
 color:black;
 }
+.headerDesign button{
+    background-color: rgb(33, 24, 39);
+    color:white;
+    width: 100px;
+}
 
 /* --------------------------Responsive section -------------------------
 --------------------------------------------------------------------------*/
