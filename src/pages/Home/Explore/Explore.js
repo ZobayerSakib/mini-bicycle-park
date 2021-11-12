@@ -5,7 +5,9 @@ const Explore = () => {
     const { products } = useAuth()
     return (
         <div className='itemDiv'>
-            <h2>Explore again</h2>
+            <div className='mt-5 mb-5 itemTitle'>
+                <h1>All Items For Our Customers</h1>
+            </div>
             <div className='itemDesign'>
                 {
                     products.map(item => <div

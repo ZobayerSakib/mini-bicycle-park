@@ -1,0 +1,23 @@
+.paymentTitle{
+   text-align: center;
+}
+.paymentTitle h1{
+    font-size: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+.paymentTitle button{
+background-color: rgb(24, 16, 31);
+color:white;
+}
+
+/*--------------------------------- Responsive Section ------------------*/
+@media only screen and (max-width:850px) {
+    .paymentTitle h1{
+        font-size: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 800;
+        text-align: center;
+    }
+}

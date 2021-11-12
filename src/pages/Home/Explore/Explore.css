@@ -1,3 +1,9 @@
+.itemTitle h1{
+font-size: 70px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: 800;
+text-align: center;
+}
 .itemDesign{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -10,11 +16,18 @@
 }
 
 
+
 /*---------------------------- Responsive Section--------------------------- */
 @media only screen and (max-width:850px) {
    .itemDiv{
        text-align: center;
    }
+   .itemTitle h1{
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    text-align: center;
+    }
     .itemDesign{
         display: grid;
         grid-template-columns: repeat(1,1fr);

@@ -37,7 +37,7 @@ const Footer = () => {
                     <Breadcrumb.Item href="/contact">
                         Contact Us
                     </Breadcrumb.Item>
-                    <Breadcrumb.Item href="/products">
+                    <Breadcrumb.Item href="/explore">
                         Product Store
                     </Breadcrumb.Item>
                 </Breadcrumb>

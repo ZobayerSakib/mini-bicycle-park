@@ -22,8 +22,7 @@ const Dashboard = () => {
 
                 </div>
                 <div className='dashboardInfo'>
-                    {/* <h2>Data Loading Site</h2> */}
-                    <Payment></Payment>
+
 
                 </div>
             </div>
