@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import '../Explore/Explore.css'
 const Explore = () => {
-    const { products, loading } = useAuth();
+    const { loading } = useAuth();
+    const [bikes, setBikes] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/bikes')
+            .then(res => res.json())
+            .then(data => setBikes(data))
+    }, [])
 
     if (loading) {
         return <div className='loadingStyle'>
@@ -18,7 +25,7 @@ const Explore = () => {
             </div>
             <div className='itemDesign'>
                 {
-                    products.map(item => <div
+                    bikes.map(item => <div
                         key={item._id}
                     >
                         <img src={item.img} alt="" />

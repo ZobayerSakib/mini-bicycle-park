@@ -18,7 +18,7 @@ const useFirebase = () => {
     useEffect(() => {
         fetch('http://localhost:5000/bikes')
             .then(res => res.json())
-            .then(data => setProducts(data))
+            .then(data => setProducts(data.slice(0, 6)))
 
     }, [])
 
