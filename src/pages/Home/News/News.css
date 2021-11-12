@@ -8,11 +8,32 @@
     font-size: 100px;
 }
 
+.newsDiv{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.newsDiv img{
+    width: 100%;
+    height: auto;
+}
+.newsDiv h4{
+    margin-top: 10px;
+    font-weight: 700;
+}
+.newsDiv p{
+    opacity: .7;
+}
 
 /*------------------------------ Responsive Section Here-------------------------- */
 @media only screen and (max-width:850px) {
     .newsInfo h1{
         font-weight: 900;
         font-size: 50px;
+    }
+
+    .newsDiv{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
     }
 }
