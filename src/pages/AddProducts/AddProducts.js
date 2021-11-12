@@ -31,6 +31,15 @@ const AddProducts = () => {
             },
             body: JSON.stringify(newProduct)
         })
+            .then(res => res.json())
+            .then(data =>
+                alert('Hey, Your new Product added successfully!')
+            )
+        imgRef.current.value = '';
+        modelRef.current.value = '';
+        infoRef.current.value = '';
+        priceRef.current.value = '';
+
         e.preventDefault();
     }
     return (

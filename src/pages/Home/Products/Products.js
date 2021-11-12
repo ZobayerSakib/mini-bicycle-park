@@ -34,17 +34,7 @@ const Products = () => {
 
 export default Products;
 
-// https://ibb.co/9cKyPcD
 
-// https://ibb.co/d7xz68v
-
-// https://ibb.co/PNKT4qB
-
-// https://ibb.co/pn7dWHj
-
-// https://ibb.co/BNjV3z0
-
-// https://ibb.co/3pLSpd8
 
 
 

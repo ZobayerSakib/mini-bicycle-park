@@ -31,6 +31,16 @@ const AddReview = () => {
             },
             body: JSON.stringify(newUser)
         })
+            .then(res => res.json())
+            .then(data =>
+                alert('Congratulation!.Comment added successfully')
+            )
+
+        commentRef.current.value = '';
+        nameRef.current.value = '';
+        emailRef.current.value = '';
+
+
 
         e.preventDefault();
     }
