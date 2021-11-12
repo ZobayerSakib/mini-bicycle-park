@@ -17,7 +17,7 @@ const Dashboard = () => {
                     <br />
                     <Link to='/payment'><button>My Orders</button></Link>
                     <br />
-                    <Link to='/payment'><button>Review</button></Link>
+                    <Link to='/addReview'><button>Review</button></Link>
                     <br />
                     <button onClick={logOut}>LogOut</button>
 

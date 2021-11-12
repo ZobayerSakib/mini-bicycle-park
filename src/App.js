@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './context/AuthProvider';
+import AddReview from './pages/AddReview/AddReview';
 import Contact from './pages/Contact/Contact';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Explore from './pages/Home/Explore/Explore';
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route exact path='/payment'>
               <Payment></Payment>
+            </Route>
+            <Route exact path='/addReview'>
+              <AddReview></AddReview>
             </Route>
 
 

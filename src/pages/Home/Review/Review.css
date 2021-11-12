@@ -1,0 +1,27 @@
+.reviewDiv h2{
+    font-family: cursive;
+    opacity: .8;
+}
+.reviewComment{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-gap: 30px;
+padding: 30px;
+text-align: center;
+opacity: .6;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ----------------------------------------Responsive Section-------------------
+-------------------------------------------------------------------------------- */
+@media only screen and (max-width:850px) {
+    .reviewComment{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 30px;
+        padding: 30px;
+        text-align: center;
+        opacity: .6;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+}

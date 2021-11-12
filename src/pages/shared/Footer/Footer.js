@@ -19,10 +19,10 @@ const Footer = () => {
                 </form>
                 <br />
                 <br />
-                <a href="/code"><span className='iconDesign'><i className="fa-2x fab fa-facebook-square"></i></span></a>
-                <a href="/">  <span className='iconDesign' ><i className="fa-2x fab fa-twitter"></i></span></a>
-                <a href="/"> <span className='iconDesign' ><i className="fa-2x fab fa-instagram-square"></i></span></a>
-                <a href="/"><span className='iconDesign' ><i className="fa-2x fab fa-pinterest-square"></i></span></a>
+                <a href="/facebookLink"><span className='iconDesign'><i className="fa-2x fab fa-facebook-square"></i></span></a>
+                <a href="/twitterLink">  <span className='iconDesign' ><i className="fa-2x fab fa-twitter"></i></span></a>
+                <a href="/instragramLink"> <span className='iconDesign' ><i className="fa-2x fab fa-instagram-square"></i></span></a>
+                <a href="/pinterestLink"><span className='iconDesign' ><i className="fa-2x fab fa-pinterest-square"></i></span></a>
             </div>
 
             <div className='breadcrumb'>

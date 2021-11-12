@@ -1,10 +1,28 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import '../Review/Review.css'
 const Review = () => {
+
+    const [reviews, setReviews] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/review')
+            .then(res => res.json())
+            .then(data => setReviews(data))
+    }, [])
     return (
-        <div className='text-center mt-5'>
-            <h2>Remainder: It is Review section</h2>
-            <p>I will do this later</p>
+        <div className='mt-5 p-3 reviewDiv'>
+            <h2>Customers Reviews</h2>
+            <div className='reviewComment'>
+                {
+                    reviews.map(review => <div
+                        key={review._id}
+                    >
+                        <p>{review.comment}</p>
+                        <h6><i>Commented By-{review.name}</i></h6>
+                        <h6><i>{review.email}</i></h6>
+                    </div>)
+                }
+            </div>
         </div>
     );
 };

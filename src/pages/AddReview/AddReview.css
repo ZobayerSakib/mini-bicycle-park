@@ -1,0 +1,52 @@
+.reviewSection h2{
+    font-size: 79px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',     Arial, sans-serif;
+    margin:30px 30px;
+    text-align: center;
+}
+.reviewForm{
+    background-color: rgba(76, 0, 130, 0.384);
+    margin: auto;
+    width: 450px;
+    text-align: center;
+    padding:30px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
+.reviewForm input,textarea{
+    width: 90%;
+    padding-left: 15px;
+    border-radius: 7px;
+    padding: 10px;
+    
+}
+.inputSubmit{
+    background-color: rgb(39, 30, 46);
+    color: white;
+}
+
+/* ---------------------------Responsive Section ------------------------------
+-------------------------------------------------------------------------------*/
+
+@media only screen and (max-width:850px) {
+    .reviewSection h2{
+        font-size: 40px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin:30px 30px;
+        text-align: center;
+        }
+    .reviewForm{
+        background-color: rgb(242 238 247);
+        margin: auto;
+        width: 90%;
+        text-align: center;
+        padding:30px;
+        margin-bottom: 30px;
+
+    }
+    .reviewForm input,textarea{
+        width: 86%;
+        border-radius: 7px;
+        padding: 10px;
+    }
+}
