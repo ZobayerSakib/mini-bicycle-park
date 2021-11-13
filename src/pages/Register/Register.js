@@ -37,7 +37,7 @@ const Register = () => {
         <div className=' registerDiv'>
             <div className='registerForm p-5'>
                 <h2>Register Form</h2>
-                <form onSubmit={registerFormHandler}>
+                <form onSubmit={registerFormHandler} className='registerFormDesign'>
 
                     <input className='mt-2' onBlur={handleEmailChange} type="email" placeholder='email' required />
                     <br />

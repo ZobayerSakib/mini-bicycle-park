@@ -8,8 +8,20 @@
     background-image: url('https://i.ibb.co/MSmMDBv/download-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+    
 }
-.loginForm{
+.loginDiv h2,p{
+    color:white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.loginForm input{
+    width: 95%;
+    border-radius: 7px;
+    height: 48px;
+}
+
+.loginFormDesign{
     width: 500px;
     background-image: url('https://i.ibb.co/DkT6cLP/download.jpg');
     text-align: center;
@@ -20,20 +32,30 @@
     border-radius: 20px;
   
 }
-.loginForm input{
-    width: 95%;
-    border-radius: 7px;
-    height: 48px;
-}
+
 
 /*------------------------------ Responsive Section----------------------------- */
 @media screen and (max-width:850px) {
+    .loginFormDesign{
+        width: 100%;
+        background-image: url('https://i.ibb.co/DkT6cLP/download.jpg');
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: auto;
+        padding: 30px;
+        border-radius: 20px;
+      
+    }
     .loginForm{
-        width: 90%;
-        background-color: brown;
-        /* align-items: center; */
+        width: 100%;
         text-align: center;
         margin: auto;
         padding: 30px;
+    }
+    .loginForm input{
+        width: 100%;
+        border-radius: 7px;
+        height: 48px;
     }
 }

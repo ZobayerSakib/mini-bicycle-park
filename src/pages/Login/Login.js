@@ -44,7 +44,7 @@ const Login = () => {
         <div className=' loginDiv'>
             <div className='loginForm p-5'>
                 <h2>Login Form</h2>
-                <form onSubmit={loginFormHandler}>
+                <form onSubmit={loginFormHandler} className='loginFormDesign'>
                     <input className='mt-2' type="email" onBlur={emailHandler} placeholder='email' required />
                     <br />
                     <input className='mt-2' type="password" onBlur={passwordHandler} placeholder='password' required />
