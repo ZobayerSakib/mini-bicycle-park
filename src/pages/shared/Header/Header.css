@@ -12,10 +12,10 @@
     font-weight: 800;
 }
 .headerLink a{
-text-decoration: none;
-margin-right: 20px;
-line-height: 53px;
-color:black;
+    text-decoration: none;
+    margin-right: 20px;
+    line-height: 53px;
+    color:black;
 }
 .headerDesign button{
     background-color: rgb(33, 24, 39);
@@ -48,11 +48,11 @@ color:black;
         line-height: 53px;
         color:white;
         }
-        .headerDesign button{
-            background-color: rgb(242, 237, 245);
-            color:rgb(20, 15, 15);
-            width: 100px;
-            font-family: cursive;
-            font-weight: 600;
+     .headerDesign button{
+         background-color: rgb(242, 237, 245);
+         color:rgb(20, 15, 15);
+         width: 100px;
+         font-family: cursive;
+         font-weight: 600;
         }
 }

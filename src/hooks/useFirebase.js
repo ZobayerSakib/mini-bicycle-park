@@ -21,10 +21,9 @@ const useFirebase = () => {
             .then(res => res.json())
             .then(data => setProducts(data.slice(0, 6)))
 
-    }, [])
+    }, []);
 
-
-
+    //Sign In with google setup
 
     const signInWithGoogle = () => {
         setLoading(true)

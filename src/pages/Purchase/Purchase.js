@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import '../Purchase/Purchase.css'
 import Footer from '../shared/Footer/Footer';
@@ -16,9 +15,6 @@ const Purchase = () => {
     const numberRef = useRef();
     const postRef = useRef();
     const cityRef = useRef();
-
-
-
 
     useEffect(() => {
         fetch(`http://localhost:5000/purchase/${purchaseId}`)
@@ -70,7 +66,7 @@ const Purchase = () => {
                     <div className='mx-auto'>
                         <img className='purchaseImg' width='200' height='100' src={bicycle.img} alt="" />
                         <h4>{bicycle.model}</h4>
-                        <p>BDT {bicycle.price} </p>
+                        <p >BDT {bicycle.price} </p>
                     </div>
                     <div>
                         <form onSubmit={handlePurchaseForm}>
@@ -88,8 +84,6 @@ const Purchase = () => {
                             <input className='mt-2' type="text" placeholder='City' ref={cityRef} required />
                             <br />
                             <input type="submit" className='mt-2' value="Order Place" />
-
-
 
                         </form>
                     </div>

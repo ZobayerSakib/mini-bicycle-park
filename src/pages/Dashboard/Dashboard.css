@@ -6,9 +6,7 @@
 }
 .dashboard{
     display: grid;
-    grid-template-columns: 1fr;
-  
-    
+    grid-template-columns: 1fr;  
 }
 .dashboardTitle{
     width:300px;
@@ -33,7 +31,8 @@ border-radius: 5px;
    margin-top: 7px;
 }
 
-/* -------------------Responsive Section -----------------------*/
+/* -------------------Responsive Section ----------------------------------------
+---------------------------------------------------------------------------------*/
 @media only screen and (max-width:850px) {
     .dashboard button{
         width: 80%;

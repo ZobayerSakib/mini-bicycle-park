@@ -43,10 +43,6 @@ const AddReview = () => {
         emailRef.current.value = '';
         ratingRef.current.value = '';
 
-        // I love this platform. I have bought 3 bicycle from this platform and their online and offline both services and their products are awesome. Thanks!
-
-
-
         e.preventDefault();
     }
 

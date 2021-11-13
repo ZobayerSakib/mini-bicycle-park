@@ -5,11 +5,10 @@ import useAuth from '../../hooks/useAuth';
 import '../Register/Register.css'
 import Footer from '../shared/Footer/Footer';
 const Register = () => {
+
     const { error, registerWithEmail, signInWithGoogle, loading } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-
 
     const handleEmailChange = e => {
 

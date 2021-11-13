@@ -5,7 +5,7 @@
     align-items: center;
 }
 .contactFileImg img{
-width: 100%;
+   width: 100%;
 }
 .contactInfo{
     display:grid;
@@ -24,7 +24,9 @@ width: 100%;
     padding-left: 15px;
 }
 
-/* --------------------------------Responsive Section -----------------------------*/
+/* --------------------------------Responsive Section -----------------------------
+-----------------------------------------------------------------------------------*/
+
 @media only screen and (max-width:850px) {
     .contactInfo{
         display:grid;
