@@ -12,8 +12,13 @@ const Header = () => {
             <div className='headerLink'>
                 <NavLink to='/home'>HOME</NavLink>
                 <NavLink to='/contact'>CONTACT US</NavLink>
+
                 {
-                    user.email && <NavLink to='/dashboard'>DASHBOARD</NavLink>
+                    user.email &&
+                    <NavLink to='/dashboard'>DASHBOARD</NavLink>
+                }
+                {
+                    user.email && <span className='spanDesign'>{user.displayName} </span>
                 }
                 {
                     user.email ? <button onClick={logOut}> Sign Out </button> :

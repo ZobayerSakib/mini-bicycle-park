@@ -7,17 +7,26 @@
 .dashboard{
     display: grid;
     grid-template-columns: 1fr;
+  
+    
 }
 .dashboardTitle{
-    font-family: cursive;
-    text-decoration: underline;
-    color:#070707;
+    width:300px;
+    text-align: center;
+    margin: auto;
+}
+.dashboard h2{
+font-family: cursive;
+font-size: 50px;
+border-left:3px solid orange;
+border-right:3px solid rgb(43, 29, 53);
+border-radius: 5px;
 }
 
-.dashboardAside{
+.dashboard{
     border-right: 3px solid grey;
 }
-.dashboardAside button{
+.dashboard button{
    width: 30%;
    background-color: rgb(43, 29, 53);
    color:white;
@@ -26,7 +35,7 @@
 
 /* -------------------Responsive Section -----------------------*/
 @media only screen and (max-width:850px) {
-    .dashboardAside button{
+    .dashboard button{
         width: 80%;
         }
 }

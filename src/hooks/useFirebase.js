@@ -8,9 +8,10 @@ firebaseAuthentication()
 
 const useFirebase = () => {
     const [user, setUser] = useState({});
-    const [loading, setLoading] = useState(true)
-    const [error, setError] = useState('')
-    const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    const [products, setProducts] = useState([]);
+    const [admin, setAdmin] = useState(false);
 
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
@@ -65,6 +66,12 @@ const useFirebase = () => {
         return () => unsubscribe;
     }, [])
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/customers/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
+
     //Authentication system by email and password
 
     const registerWithEmail = (email, password) => {
@@ -107,8 +114,10 @@ const useFirebase = () => {
             })
     }
 
+
     return {
         user,
+        admin,
         products,
         error,
         loading,

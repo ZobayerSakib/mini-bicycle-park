@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-
+import '../MakeAdmin/MakeAdmin.css'
 const MakeAdmin = () => {
-    const [email, setEmail] = useState('')
+    const [email, setEmail] = useState('');
+    const [successAdmin, setSuccessAdmin] = useState(false);
     const handleEmail = e => {
         setEmail(e.target.value)
     }
@@ -15,21 +16,26 @@ const MakeAdmin = () => {
             body: JSON.stringify(user)
         })
             .then(res => res.json())
-            .then(data =>
-                alert('Admin added successfully Done!')
+            .then(data => {
+                if (data.modifiedCount) {
+                    console.log(data);
+                    setSuccessAdmin(true);
+                }
+            }
             )
-        e.target.value = '';
+
         e.preventDefault();
     }
     return (
 
-        <div>
+        <div className='adminDiv'>
             <h2>Make an Admin</h2>
-            <form onSubmit={handleAdminForm}>
+            <form onSubmit={handleAdminForm} className='adminForm'>
                 <input type="email" onBlur={handleEmail} placeholder='email' required />
                 <br /><br />
                 <input type="submit" value="Make Admin" />
             </form>
+            {successAdmin && alert('Made an Admin Successfully')}
         </div>
     );
 };

@@ -1,0 +1,35 @@
+.adminDiv h2{
+    margin-top: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans',    Arial, sans-serif;
+    text-align: center;
+}
+.adminForm{
+    width:450px;
+    background-color: rgb(233, 214, 214);
+    border-radius: 6px;
+    margin: auto;
+    padding: 30px;
+    
+}
+.adminForm input{
+    width: 95%;
+    padding: 8px;
+    border-radius: 2px;
+}
+
+/* ---------------------------Responsive Section----------------------------- */
+@media only screen and (max-width:850px) {
+    .adminForm{
+        width:90%;
+        background-color: rgb(233, 214, 214);
+        border-radius: 6px;
+        margin: auto;
+        padding: 30px;
+        
+    }
+    .adminForm input{
+        width: 85%;
+        padding: 8px;
+        border-radius: 2px;
+    }
+}

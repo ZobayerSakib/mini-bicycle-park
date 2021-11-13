@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import '../Purchase/Purchase.css'
 import Footer from '../shared/Footer/Footer';
@@ -44,7 +45,7 @@ const Purchase = () => {
         })
             .then(res => res.json())
             .then(data =>
-                alert('Lucky Customer. Your information added successfully')
+                window.confirm('We are going to confirm your Order.')
             )
 
         nameRef.current.value = '';
@@ -74,9 +75,9 @@ const Purchase = () => {
                     <div>
                         <form onSubmit={handlePurchaseForm}>
 
-                            <input defaultValue={user.displayName} ref={nameRef} type="text" required />
+                            <input defaultValue={user.displayName} ref={nameRef} type="text" placeholder='Name' required />
                             <br />
-                            <input defaultValue={user.email} className='mt-2' type="text" ref={emailRef} required />
+                            <input defaultValue={user.email} className='mt-2' type="text" ref={emailRef} placeholder='email' required />
                             <br />
                             <input className='mt-2' type="text" placeholder='address' ref={addressRef} required />
                             <br />

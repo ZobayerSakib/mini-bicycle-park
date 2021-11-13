@@ -6,7 +6,7 @@ import '../Dashboard/Dashboard.css'
 import Footer from '../shared/Footer/Footer';
 
 const Dashboard = () => {
-    const { logOut, loading } = useAuth();
+    const { admin, logOut, loading } = useAuth();
     if (loading) {
         return <div className='loadingStyle'>
             <Spinner animation="border" variant="info" />
@@ -14,32 +14,49 @@ const Dashboard = () => {
     }
 
     return (
-        <div className='text-center mt-5 '>
-            <div className='dashboard '>
-                <div className='dashboardAside mb-5 '>
-                    <h2>Dashboard</h2>
-                    <hr />
-                    <Link to='/payment'><button>Payment</button></Link>
-                    <br />
-                    <Link to='/myOrders'><button>My Orders</button></Link>
-                    <br />
-                    <Link to='/addReview'><button>Review</button></Link>
-                    <br />
-                    <Link to='/manageOrders'><button>Manage all Orders</button></Link>
-                    <br />
-                    <Link to='/addProducts'><button>Add a Product</button></Link>
-                    <br />
-                    <Link to='/manageProducts'><button>Manage Product</button></Link>
-                    <br />
-                    <Link to='/makeAdmin'><button>Make Admin</button></Link>
-                    <br />
-                    <button onClick={logOut}>LogOut</button>
+        <>
+            <div className='text-center mt-5 '>
+                <div className='dashboard '>
+                    <div className='dashboard mb-5 '>
+                        <div className='dashboardTitle'>
+                            <h2>Dashboard</h2>
+                        </div>
+
+                        {
+                            !admin && <div>
+
+                                <Link to='/payment'><button>Payment</button></Link>
+                                <br />
+                                <Link to='/myOrders'><button>My Orders</button></Link>
+                                <br />
+                                <Link to='/addReview'><button>Review</button></Link>
+                                <br />
+                                <button onClick={logOut}>LogOut</button>
+                            </div>
+                        }
+                        {
+                            admin && <div>
+                                <Link to='/manageOrders'><button>Manage all Orders</button></Link>
+                                <br />
+                                <Link to='/addProducts'><button>Add a Product</button></Link>
+                                <br />
+                                <Link to='/manageProducts'><button>Manage Product</button></Link>
+                                <br />
+                                <Link to='/makeAdmin'><button>Make Admin</button></Link>
+                                <br />
+                                <button onClick={logOut}>LogOut</button>
+
+                            </div>
+                        }
+
+
+
+                    </div>
 
                 </div>
-
+                <Footer></Footer>
             </div>
-            <Footer></Footer>
-        </div>
+        </>
     );
 };
 
