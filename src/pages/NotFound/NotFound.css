@@ -9,6 +9,9 @@
     padding: 40px;
 
 }
+.notFound p{
+    color: black;
+}
 
 .notFound h1{
     font-size: 120px;

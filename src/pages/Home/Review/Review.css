@@ -2,6 +2,9 @@
     font-family: cursive;
     opacity: .8;
 }
+.reviewDiv P{
+    color: black;
+}
 .reviewComment{
 display: grid;
 grid-template-columns: repeat(3,1fr);

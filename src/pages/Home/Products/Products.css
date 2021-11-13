@@ -5,9 +5,13 @@
     margin: 20px;
     grid-gap: 40px;
 }
+
 .bikesDesign img{
     width: 100%;
     height:300px;
+}
+.bikesDesign p{
+    color:black;
 }
 .bikesDesign button{
     width: 144px;

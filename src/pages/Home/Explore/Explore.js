@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import Footer from '../../shared/Footer/Footer';
 import '../Explore/Explore.css'
 const Explore = () => {
     const { loading } = useAuth();
@@ -40,6 +41,7 @@ const Explore = () => {
                     </div>)
                 }
             </div>
+            <Footer></Footer>
         </div>
     );
 };
