@@ -1,25 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import '../News/News.css'
 const News = () => {
-    // https://ibb.co/brsD3rL
-    // https://ibb.co/PjQ3DhQ
-    // https://ibb.co/PCLvnqQ
-    // https://ibb.co/3rW8MjJ
-
-    // const fake = [
-    //     { img: 'https://i.ibb.co/FB5CWBJ/Depositphotos-126062514-l-2015-1.jpg', name: 'Modern and Outstanding style pettern ', date: '12 Nov,2021', comment: 'No Comments' },
-
-    //     { img: 'https://i.ibb.co/c3LMYFL/allbikes-1539286251.jpg', name: 'Many Design and Colours ', date: '12 Nov,2021', comment: 'No Comments' },
-
-    //     { img: 'https://i.ibb.co/12gt5F6/Fat-Tire-Bike-by-Ensey-Motorized-Bikes.jpg', name: 'Design will Qualify the mindset of Buyer ', date: '12 Nov,2021', comment: 'No Comments' },
-
-    //     { img: 'https://i.ibb.co/1vKpdPS/maxresdefault.jpg', name: 'Users Can Be Older or Younger ', date: '12 Nov,2021', comment: 'No Comments' },
-    // ]
 
     const [news, setNews] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/news')
+        fetch('https://shrouded-basin-86219.herokuapp.com/news')
             .then(res => res.json())
             .then(data => setNews(data))
     }, [])

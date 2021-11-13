@@ -8,7 +8,7 @@ const MakeAdmin = () => {
     }
     const handleAdminForm = e => {
         const user = { email }
-        fetch('http://localhost:5000/customers/admin', {
+        fetch('https://shrouded-basin-86219.herokuapp.com/customers/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

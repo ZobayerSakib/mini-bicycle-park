@@ -17,7 +17,7 @@ const Purchase = () => {
     const cityRef = useRef();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/purchase/${purchaseId}`)
+        fetch(`https://shrouded-basin-86219.herokuapp.com/purchase/${purchaseId}`)
             .then(res => res.json())
             .then(data => setBicycle(data))
     }, [])
@@ -32,7 +32,7 @@ const Purchase = () => {
 
         const customerInfo = { name, email, address, number, postCode, city }
 
-        fetch('http://localhost:5000/customers', {
+        fetch('https://shrouded-basin-86219.herokuapp.com/customers', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

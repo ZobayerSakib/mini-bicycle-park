@@ -12,7 +12,7 @@ const Contact = () => {
         </div>
     }
     return (
-        <div>
+        <div className='contactFileDiv'>
 
             <div className='contactFileImg'>
                 <img src='https://i.ibb.co/Xx8shW0/p07phq4b.jpg' alt="" />

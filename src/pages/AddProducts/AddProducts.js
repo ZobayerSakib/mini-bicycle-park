@@ -24,7 +24,7 @@ const AddProducts = () => {
 
         const newProduct = { img, model, info, price }
 
-        fetch('http://localhost:5000/bikes', {
+        fetch('https://shrouded-basin-86219.herokuapp.com/bikes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

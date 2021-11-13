@@ -17,7 +17,7 @@ const useFirebase = () => {
     const auth = getAuth();
 
     useEffect(() => {
-        fetch('http://localhost:5000/bikes')
+        fetch('https://shrouded-basin-86219.herokuapp.com/bikes')
             .then(res => res.json())
             .then(data => setProducts(data.slice(0, 6)))
 
@@ -66,7 +66,7 @@ const useFirebase = () => {
     }, [])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/customers/${user.email}`)
+        fetch(`https://shrouded-basin-86219.herokuapp.com/customers/${user.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email])

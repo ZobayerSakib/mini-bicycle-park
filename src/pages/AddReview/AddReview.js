@@ -26,7 +26,7 @@ const AddReview = () => {
 
         const newUser = { comment, name, email, rating };
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://shrouded-basin-86219.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

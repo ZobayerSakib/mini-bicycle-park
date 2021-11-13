@@ -4,6 +4,9 @@
     justify-content: center;
     align-items: center;
 }
+.contactFileDiv p{
+    color:black;
+}
 .contactFileImg img{
    width: 100%;
 }
